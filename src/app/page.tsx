@@ -1,10 +1,19 @@
 import Link from "next/link"
+import { Share_Tech_Mono } from "next/font/google"
+
+const matrixFont = Share_Tech_Mono({
+  subsets: ["latin"],
+  weight: "400",
+})
 
 export default function Home() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-white px-6">
       <div className="text-center">
-        <h1 className="text-6xl md:text-7xl font-semibold tracking-tight">
+
+        <h1
+          className={`${matrixFont.className} text-6xl md:text-7xl tracking-widest text-black`}
+        >
           Refuge.
         </h1>
 
@@ -14,6 +23,7 @@ export default function Home() {
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-3">
+
           <Link
             href="/register"
             className="w-56 rounded-xl bg-black px-6 py-3 text-sm font-semibold text-white hover:opacity-90"
@@ -34,7 +44,9 @@ export default function Home() {
           >
             Enter Feed
           </Link>
+
         </div>
+
       </div>
     </main>
   )
