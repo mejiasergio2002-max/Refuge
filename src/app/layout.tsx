@@ -8,20 +8,14 @@ const matrixFont = Share_Tech_Mono({
 })
 
 export const metadata = {
-  title: "Refuge",
-  description: "Your Safety. My Priority.",
+  title: "refuge",
+  description: "your safety. my priority.",
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${matrixFont.className} bg-white text-black`}>
-        {children}
-      </body>
+      <body className={matrixFont.className}>{children}</body>
     </html>
   )
 }
