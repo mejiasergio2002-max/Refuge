@@ -30,7 +30,9 @@ export default function LoginPage() {
             </div>
 
             <div>
-              <label className="block text-sm text-white/75 mb-2">password</label>
+              <label className="block text-sm text-white/75 mb-2">
+                password
+              </label>
               <input className="field" type="password" />
             </div>
 
@@ -40,4 +42,18 @@ export default function LoginPage() {
               <div>
                 new here?{" "}
                 <Link href="/register" className="small-link">
-                  create acce
+                  create access&lt;/&gt;
+                </Link>
+              </div>
+              <div className="md:text-right">
+                <Link href="/" className="small-link">
+                  back&lt;/&gt;
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  )
+}
