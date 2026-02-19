@@ -1,12 +1,21 @@
+import "./globals.css"
+import type { ReactNode } from "react"
+
 export const metadata = {
   title: "refuge",
-  description: "security booking platform",
+  description: "your safety. my priority.",
 }
 
-export default function rootlayout({ children }: { children: any }) {
+export default function RootLayout({
+  children,
+}: {
+  children: ReactNode
+}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-black text-white">
+        {children}
+      </body>
     </html>
   )
 }
