@@ -3,102 +3,73 @@ import Link from "next/link"
 export default function LoginPage() {
   return (
     <main className="min-h-screen bg-white">
-      <div className="min-h-screen bg-grid-light">
-        <div className="mx-auto max-w-6xl px-6 py-10">
-          <header className="flex items-center justify-between">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-black/70 hover:text-black"
-            >
-              <span className="text-lg">←</span> back
-            </Link>
+      <div className="grid min-h-screen md:grid-cols-2">
 
-            <div className="font-display text-sm font-semibold tracking-[0.22em] text-black/60">
+        {/* left brand panel */}
+        <div className="hidden md:flex flex-col justify-between bg-gradient-to-br from-neutral-900 to-black text-white p-12">
+          <div>
+            <div className="text-sm tracking-[0.2em] font-semibold opacity-70">
               refuge
             </div>
-          </header>
 
-          <div className="mx-auto mt-12 max-w-xl">
-            <div className="rounded-3xl border border-black/10 bg-white p-7 shadow-[0_20px_80px_rgba(0,0,0,0.08)]">
-              <div className="flex items-start justify-between gap-6">
-                <div>
-                  <h1 className="font-display text-3xl font-bold tracking-[0.12em]">
-                    welcome back
-                  </h1>
-                  <p className="mt-2 text-sm text-black/60">
-                    sign in to continue to your feed.
-                  </p>
-                </div>
+            <h1 className="mt-8 text-4xl font-bold leading-tight">
+              welcome back.
+            </h1>
 
-                <div className="h-12 w-12 rounded-2xl border border-black/10 bg-black/5" />
-              </div>
+            <p className="mt-6 text-sm opacity-70 max-w-md">
+              sign in to manage bookings and access your feed.
+            </p>
+          </div>
 
-              <div className="mt-8 grid gap-4">
-                <div>
-                  <label className="text-xs font-semibold tracking-[0.16em] text-black/55">
-                    email
-                  </label>
-                  <input
-                    className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-black placeholder:text-black/35 outline-none focus:border-black/20 focus:ring-4 focus:ring-black/5"
-                    placeholder="you@domain.com"
-                    type="email"
-                  />
-                </div>
-
-                <div>
-                  <div className="flex items-center justify-between">
-                    <label className="text-xs font-semibold tracking-[0.16em] text-black/55">
-                      password
-                    </label>
-                    <button
-                      type="button"
-                      className="text-xs font-semibold text-black/50 hover:text-black"
-                    >
-                      forgot?
-                    </button>
-                  </div>
-
-                  <input
-                    className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-black placeholder:text-black/35 outline-none focus:border-black/20 focus:ring-4 focus:ring-black/5"
-                    placeholder="••••••••"
-                    type="password"
-                  />
-                </div>
-
-                <button className="mt-2 inline-flex items-center justify-center rounded-2xl bg-black px-5 py-3 text-sm font-semibold text-white hover:opacity-90">
-                  sign in
-                </button>
-
-                <div className="flex items-center justify-between text-xs text-black/50">
-                  <span>
-                    new here?{" "}
-                    <Link
-                      href="/register"
-                      className="font-semibold text-black/70 hover:text-black"
-                    >
-                      create an account
-                    </Link>
-                  </span>
-
-                  <Link
-                    href="/feed"
-                    className="font-semibold text-black/60 hover:text-black"
-                  >
-                    go to feed →
-                  </Link>
-                </div>
-
-                <div className="mt-4 rounded-2xl border border-black/10 bg-black/5 p-4 text-xs text-black/55">
-                  this is an mvp ui screen. next step: connect supabase auth.
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-6 text-center text-xs text-black/45">
-              your safety. my priority.
-            </div>
+          <div className="text-xs opacity-50">
+            secure access • mvp preview
           </div>
         </div>
+
+        {/* right form panel */}
+        <div className="flex items-center justify-center p-8">
+          <div className="w-full max-w-md">
+
+            <Link href="/" className="text-sm text-black/60 hover:text-black">
+              ← back
+            </Link>
+
+            <h2 className="mt-8 text-3xl font-semibold">
+              sign in
+            </h2>
+
+            <p className="mt-2 text-sm text-black/60">
+              enter your credentials below.
+            </p>
+
+            <div className="mt-8 space-y-4">
+              <input
+                type="email"
+                placeholder="email"
+                className="w-full rounded-xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-4 focus:ring-black/5"
+              />
+
+              <input
+                type="password"
+                placeholder="password"
+                className="w-full rounded-xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-4 focus:ring-black/5"
+              />
+
+              <button className="w-full rounded-xl bg-black py-3 text-sm font-semibold text-white hover:opacity-90">
+                sign in
+              </button>
+            </div>
+
+            <div className="mt-6 text-sm text-black/60">
+              new here?{" "}
+              <Link href="/register" className="font-semibold text-black">
+                create account
+              </Link>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </main>
   )
