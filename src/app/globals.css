@@ -8,6 +8,5 @@ body {
 }
 
 body {
-  background-color: black;
-  color: white;
+  background: radial-gradient(circle at center, #111 0%, #000 70%);
 }
