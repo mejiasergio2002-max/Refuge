@@ -1,0 +1,57 @@
+.wrap {
+  display: grid;
+  place-items: center;
+  padding: 28px;
+}
+
+.center {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  transform: translateY(6px);
+}
+
+.brand {
+  margin: 0 0 14px 0;
+  font-size: clamp(40px, 6vw, 64px);
+  letter-spacing: 1px;
+  color: rgba(220, 255, 236, 0.95);
+  text-shadow: 0 0 18px rgba(39, 255, 122, 0.22);
+}
+
+.tagline {
+  margin: 0 0 22px 0;
+  font-size: 16px;
+  color: rgba(220, 255, 236, 0.78);
+}
+
+.links {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.link,
+.linkActive {
+  width: 140px;
+  padding: 6px 10px;
+  border: 1px solid rgba(39, 255, 122, 0.24);
+  background: rgba(0, 0, 0, 0.18);
+  color: rgba(220, 255, 236, 0.85);
+  transition: 160ms ease;
+  font-size: 14px;
+}
+
+.link:hover,
+.linkActive:hover {
+  border-color: rgba(39, 255, 122, 0.45);
+  box-shadow: 0 0 18px rgba(39, 255, 122, 0.18);
+  transform: translateY(-1px);
+}
+
+.linkActive {
+  border-color: rgba(39, 255, 122, 0.55);
+  background: rgba(0, 0, 0, 0.26);
+  color: rgba(220, 255, 236, 0.92);
+  text-shadow: 0 0 10px rgba(39, 255, 122, 0.22);
+}

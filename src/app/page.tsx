@@ -1,44 +1,25 @@
-import Link from "next/link"
+import Link from "next/link";
+import styles from "./landing.module.css";
 
-export default function Landing() {
+export default function LandingPage() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-white px-6">
-      <div className="flex flex-col items-center text-center gap-6">
-        <h1 className="text-6xl md:text-7xl tracking-widest">refuge.</h1>
+    <main className={`matrix-bg ${styles.wrap}`}>
+      <section className={styles.center}>
+        <h1 className={styles.brand}>Refuge.</h1>
+        <p className={styles.tagline}>Your Safety. My Priority.</p>
 
-        <p className="text-lg md:text-xl">your safety. my priority.</p>
-
-        <div className="flex flex-col items-center gap-3 pt-2">
-          <Link
-            href="/login"
-            className="w-60 border border-black py-2 hover:bg-black hover:text-white transition"
-          >
-            login
+        <nav className={styles.links}>
+          <Link className={styles.link} href="/register">
+            Register
           </Link>
-
-          <Link
-            href="/register"
-            className="w-60 border border-black py-2 hover:bg-black hover:text-white transition"
-          >
-            register
+          <Link className={styles.link} href="/login">
+            Login
           </Link>
-
-          <Link
-            href="/feed"
-            className="w-60 border border-black py-2 hover:bg-black hover:text-white transition"
-          >
-            enter
+          <Link className={styles.linkActive} href="/feed">
+            Enter Feed
           </Link>
-
-          {/* optional: quick jump to home page */}
-          <Link
-            href="/home"
-            className="w-60 border border-black/30 py-2 text-black/70 hover:bg-black hover:text-white transition"
-          >
-            home
-          </Link>
-        </div>
-      </div>
+        </nav>
+      </section>
     </main>
-  )
+  );
 }

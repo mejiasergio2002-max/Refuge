@@ -1,23 +1,21 @@
-import "./globals.css"
-import { Share_Tech_Mono } from "next/font/google"
-import type { ReactNode } from "react"
+import "./globals.css";
+import type { Metadata } from "next";
+import { Share_Tech_Mono } from "next/font/google";
 
-const matrix = Share_Tech_Mono({
-  subsets: ["latin"],
+const matrixMono = Share_Tech_Mono({
   weight: "400",
-})
+  subsets: ["latin"],
+});
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Refuge",
   description: "Your Safety. My Priority.",
-}
+};
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${matrix.className} bg-white text-black`}>
-        {children}
-      </body>
+      <body className={matrixMono.className}>{children}</body>
     </html>
-  )
+  );
 }
