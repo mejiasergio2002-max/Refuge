@@ -1,7 +1,6 @@
-cat > src/app/feed/page.tsx <<'eof'
 import Link from "next/link"
 
-export default function FeedPage() {
+export default function Page() {
   return (
     <main className="min-h-screen bg-black text-white">
       <div className="mx-auto max-w-3xl px-6 py-16">
@@ -21,4 +20,3 @@ export default function FeedPage() {
     </main>
   )
 }
-eof

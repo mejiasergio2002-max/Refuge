@@ -1,4 +1,3 @@
-cat > src/app/login/page.tsx <<'eof'
 import Link from "next/link"
 
 export default function LoginPage() {
@@ -41,4 +40,3 @@ export default function LoginPage() {
     </main>
   )
 }
-eof

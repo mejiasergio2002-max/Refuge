@@ -1,4 +1,3 @@
-cat > src/app/register/page.tsx <<'eof'
 import Link from "next/link"
 
 export default function RegisterPage() {
@@ -41,4 +40,3 @@ export default function RegisterPage() {
     </main>
   )
 }
-eof
