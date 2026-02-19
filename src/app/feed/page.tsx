@@ -1,3 +1,4 @@
+cat > src/app/feed/page.tsx <<'eof'
 import Link from "next/link"
 
 export default function FeedPage() {
@@ -8,17 +9,16 @@ export default function FeedPage() {
           ← back
         </Link>
 
-        <h1 className="mt-6 font-display text-4xl tracking-widest">feed</h1>
+        <h1 className="mt-6 text-4xl font-semibold tracking-tight">feed</h1>
         <p className="mt-3 text-sm text-white/65">
-          placeholder. next you’ll tell me what the feed should look like.
+          placeholder. feed ui comes next.
         </p>
 
         <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6">
-          <div className="text-sm text-white/70">
-            feed ui coming next.
-          </div>
+          <div className="text-sm text-white/70">ready for your feed spec.</div>
         </div>
       </div>
     </main>
   )
 }
+eof

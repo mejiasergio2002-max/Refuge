@@ -1,3 +1,4 @@
+cat > src/app/register/page.tsx <<'eof'
 import Link from "next/link"
 
 export default function RegisterPage() {
@@ -8,7 +9,7 @@ export default function RegisterPage() {
           ← back
         </Link>
 
-        <h1 className="mt-6 font-display text-4xl tracking-widest">register</h1>
+        <h1 className="mt-6 text-4xl font-semibold tracking-tight">register</h1>
         <p className="mt-3 text-sm text-white/65">
           placeholder page. next step: connect auth.
         </p>
@@ -40,3 +41,4 @@ export default function RegisterPage() {
     </main>
   )
 }
+eof
