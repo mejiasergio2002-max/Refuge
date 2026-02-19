@@ -1,31 +1,27 @@
 import "./globals.css"
 import type { ReactNode } from "react"
-import { Orbitron, Inter } from "next/font/google"
+import { Rajdhani, Inter } from "next/font/google"
 
-const display = Orbitron({
+const display = Rajdhani({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["500", "600", "700"],
+  variable: "--font-display",
 })
 
 const body = Inter({
   subsets: ["latin"],
+  variable: "--font-body",
 })
 
 export const metadata = {
-  title: "Refuge",
-  description: "Your Safety. My Priority.",
+  title: "refuge",
+  description: "your safety. my priority.",
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${body.className} bg-black text-white`}>
-        {children}
-      </body>
+    <html lang="en" className={`${display.variable} ${body.variable}`}>
+      <body>{children}</body>
     </html>
   )
 }
