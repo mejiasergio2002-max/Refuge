@@ -2,72 +2,53 @@ import Link from "next/link"
 
 export default function LoginPage() {
   return (
-    <main className="min-h-screen bg-white">
-      <div className="grid min-h-screen md:grid-cols-2">
+    <main className="min-h-screen flex items-center justify-center bg-white px-6">
+      <div className="w-full max-w-xl border border-black/20 p-10">
 
-        {/* left brand panel */}
-        <div className="hidden md:flex flex-col justify-between bg-gradient-to-br from-neutral-900 to-black text-white p-12">
-          <div>
-            <div className="text-sm tracking-[0.2em] font-semibold opacity-70">
-              refuge
-            </div>
-
-            <h1 className="mt-8 text-4xl font-bold leading-tight">
-              welcome back.
-            </h1>
-
-            <p className="mt-6 text-sm opacity-70 max-w-md">
-              sign in to manage bookings and access your feed.
-            </p>
-          </div>
-
-          <div className="text-xs opacity-50">
-            secure access • mvp preview
-          </div>
+        <div className="flex justify-between text-sm text-black/60">
+          <span>SECURE NODE • LOGIN</span>
+          <span>v1.0.0</span>
         </div>
 
-        {/* right form panel */}
-        <div className="flex items-center justify-center p-8">
-          <div className="w-full max-w-md">
+        <h1 className="mt-8 text-3xl tracking-widest">
+          Access Portal
+        </h1>
 
-            <Link href="/" className="text-sm text-black/60 hover:text-black">
-              ← back
-            </Link>
+        <p className="mt-4 text-sm text-black/60">
+          Authenticate your credentials to enter the system.
+        </p>
 
-            <h2 className="mt-8 text-3xl font-semibold">
-              sign in
-            </h2>
+        <div className="mt-8 space-y-5">
 
-            <p className="mt-2 text-sm text-black/60">
-              enter your credentials below.
-            </p>
-
-            <div className="mt-8 space-y-4">
-              <input
-                type="email"
-                placeholder="email"
-                className="w-full rounded-xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-4 focus:ring-black/5"
-              />
-
-              <input
-                type="password"
-                placeholder="password"
-                className="w-full rounded-xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-4 focus:ring-black/5"
-              />
-
-              <button className="w-full rounded-xl bg-black py-3 text-sm font-semibold text-white hover:opacity-90">
-                sign in
-              </button>
-            </div>
-
-            <div className="mt-6 text-sm text-black/60">
-              new here?{" "}
-              <Link href="/register" className="font-semibold text-black">
-                create account
-              </Link>
-            </div>
-
+          <div>
+            <label className="block text-sm mb-2">Email</label>
+            <input
+              type="email"
+              className="w-full border border-black/30 px-4 py-3 outline-none focus:border-black"
+            />
           </div>
+
+          <div>
+            <label className="block text-sm mb-2">Password</label>
+            <input
+              type="password"
+              className="w-full border border-black/30 px-4 py-3 outline-none focus:border-black"
+            />
+          </div>
+
+          <button className="w-full border border-black bg-black text-white py-3 hover:opacity-90 transition">
+            INITIATE ACCESS
+          </button>
+
+        </div>
+
+        <div className="mt-6 flex justify-between text-sm text-black/60">
+          <Link href="/register" className="hover:underline">
+            Create Access
+          </Link>
+          <Link href="/" className="hover:underline">
+            ← Back
+          </Link>
         </div>
 
       </div>
