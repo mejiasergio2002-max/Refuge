@@ -8,39 +8,38 @@ const matrixFont = Share_Tech_Mono({
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-white px-6">
-      <div className="text-center">
+    <main
+      className={`${matrixFont.className} min-h-screen flex items-center justify-center bg-white`}
+    >
+      <div className="flex flex-col items-center text-center space-y-6">
 
-        <h1
-          className={`${matrixFont.className} text-6xl md:text-7xl tracking-widest text-black`}
-        >
+        <h1 className="text-6xl md:text-7xl tracking-widest">
           Refuge.
         </h1>
 
-        <p className="mt-6 text-lg md:text-xl text-black/70">
-          <span className="font-semibold text-black">Your Safety.</span>{" "}
-          <span className="font-semibold text-black">My Priority.</span>
+        <p className="text-lg md:text-xl">
+          Your Safety. My Priority.
         </p>
 
-        <div className="mt-10 flex flex-col items-center gap-3">
+        <div className="flex flex-col items-center space-y-3 mt-6">
 
           <Link
             href="/register"
-            className="w-56 rounded-xl bg-black px-6 py-3 text-sm font-semibold text-white hover:opacity-90"
+            className="w-60 rounded-lg bg-black px-6 py-3 text-white hover:opacity-90 transition"
           >
             Register
           </Link>
 
           <Link
             href="/login"
-            className="w-56 rounded-xl border border-black/15 bg-white px-6 py-3 text-sm font-semibold hover:bg-black/5"
+            className="w-60 rounded-lg border border-black px-6 py-3 hover:bg-black hover:text-white transition"
           >
             Login
           </Link>
 
           <Link
             href="/feed"
-            className="w-56 rounded-xl border border-black/10 bg-white px-6 py-3 text-sm font-semibold text-black/70 hover:bg-black/5"
+            className="w-60 rounded-lg border border-black px-6 py-3 hover:bg-black hover:text-white transition"
           >
             Enter Feed
           </Link>
