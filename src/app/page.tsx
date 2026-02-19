@@ -2,32 +2,38 @@ import Link from "next/link"
 
 export default function Landing() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <div className="text-center space-y-8">
-        <h1 className="text-6xl tracking-widest">
-          Refuge.
+    <main className="min-h-screen flex items-center justify-center bg-white px-6">
+      <div className="text-center flex flex-col items-center gap-8">
+
+        {/* logo */}
+        <img
+          src="/brand/logo.svg"
+          alt="refuge"
+          className="h-14 w-14"
+        />
+
+        {/* title */}
+        <h1 className="text-6xl md:text-7xl tracking-widest neon-title">
+          refuge.
         </h1>
 
-        <div className="flex flex-col gap-4 items-center">
-          <Link
-            href="/login"
-            className="w-48 border border-black py-2 hover:bg-black hover:text-white transition"
-          >
-            Login
+        {/* tagline (optional, remove if you want ultra-minimal) */}
+        <p className="text-sm md:text-base text-black/60 tracking-widest">
+          your safety. my priority.
+        </p>
+
+        {/* buttons */}
+        <div className="flex flex-col items-center gap-4 pt-2">
+          <Link href="/login" className="neon-btn w-56">
+            login
           </Link>
 
-          <Link
-            href="/register"
-            className="w-48 border border-black py-2 hover:bg-black hover:text-white transition"
-          >
-            Register
+          <Link href="/register" className="neon-btn w-56">
+            register
           </Link>
 
-          <Link
-            href="/feed"
-            className="w-48 border border-black py-2 hover:bg-black hover:text-white transition"
-          >
-            Enter
+          <Link href="/feed" className="neon-btn-ghost w-56">
+            enter
           </Link>
         </div>
       </div>
