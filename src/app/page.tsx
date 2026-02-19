@@ -10,13 +10,17 @@ export default function Home() {
   return (
     <main className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
 
-      {/* Matrix glow background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#003300_0%,#000000_70%)]"></div>
+      {/* background layers */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#001100] to-black"></div>
+
+      <div className="absolute inset-0 opacity-20 bg-[linear-gradient(#00ff0033_1px,transparent_1px),linear-gradient(90deg,#00ff0033_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#00ff0022_0%,transparent_60%)]"></div>
 
       <div className="relative z-10 text-center px-6">
 
         <h1
-          className={`${matrixFont.className} text-6xl md:text-7xl tracking-widest text-green-400 drop-shadow-[0_0_20px_#00ff00]`}
+          className={`${matrixFont.className} text-6xl md:text-7xl tracking-widest text-green-400 drop-shadow-[0_0_25px_#00ff00]`}
         >
           Refuge.
         </h1>
