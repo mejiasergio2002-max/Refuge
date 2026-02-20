@@ -1,11 +1,29 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import styles from "../auth.module.css";
 
 export default function LoginPage() {
+  const router = useRouter();
   const [show, setShow] = useState(false);
+
+  const [identity, setIdentity] = useState("");
+  const [password, setPassword] = useState("");
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // basic front-end validation (no backend yet)
+    if (!identity.trim() || !password.trim()) {
+      alert("Please enter your email/username and password.");
+      return;
+    }
+
+    // Navigate to feed
+    router.push("/feed");
+  };
 
   return (
     <main className="matrix-bg">
@@ -22,9 +40,15 @@ export default function LoginPage() {
               verify your identity in the grid. keep credentials secure.
             </p>
 
-            <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+            <form className={styles.form} onSubmit={onSubmit}>
               <div className={styles.row}>
-                <input className={styles.input} placeholder="email or username" />
+                <input
+                  className={styles.input}
+                  placeholder="email or username"
+                  value={identity}
+                  onChange={(e) => setIdentity(e.target.value)}
+                  autoComplete="username"
+                />
               </div>
 
               <div className={styles.row}>
@@ -33,6 +57,9 @@ export default function LoginPage() {
                     className={styles.input}
                     placeholder="password"
                     type={show ? "text" : "password"}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    autoComplete="current-password"
                   />
                   <button
                     type="button"
